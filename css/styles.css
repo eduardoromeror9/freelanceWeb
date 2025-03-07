@@ -4,6 +4,7 @@
   --primario: #FFC107;
   --secundario: #0097A7;
   --gris: #757575;
+  --grisClaro: #DFE9F3;
 }
 
 html {
@@ -17,11 +18,24 @@ html {
 body {
   font-size: 16px;
   font-family: "Krub", sans-serif;
+  background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
-.titulo {
-  text-align: center;
+/* Tipografia */
+h1 {
   font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }
 
 .titulo span {
@@ -33,6 +47,27 @@ body {
   margin: 0 auto; /* da el margen a todos los lados */
 }
 
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+  width: 90%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+
+/* Navegacion principal */
 .nav-bg {
   background-color: var(--secundario);
 }
@@ -78,4 +113,18 @@ body {
   background-color: rgb(0 0 0 / 60%);
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p {
+  color: var(--blanco);
+}
+
+.contenido-hero .ubicacion {
+  display: flex;
+  align-items: flex-end
 }
